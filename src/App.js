@@ -34,7 +34,7 @@ class App extends React.Component {
       <Router path={this.props.path}>
         <div>
           <Route exact path="/" component={Home} />
-          <Route path="/writePost" component={CreatePost} />
+          <Route path="/write" component={CreatePost} />
           <Route path="/post/:blogId" component={BlogWrapper} />
 
         </div>
