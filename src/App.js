@@ -109,7 +109,10 @@ class CreatePost extends React.Component {
       secretToken: this.state.secretToken,
       id: this.state.id
     }, axiosConfig)
-    .then(res => console.log("response", res))
+    .then(res => {
+      console.log("response", res);
+      window.location.href = '/'
+    })
     .catch(err => console.log(err)
     )
     // axios.get(`getAllPosts`).then(res => console.log("responsebachhhe", res))
