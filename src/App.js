@@ -32,7 +32,7 @@ class App extends React.Component {
   render() {
     return (
       <Router path={this.props.path}>
-        <div>
+        <div  style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
           <Route exact path="/" component={Home} />
           <Route path="/write" component={CreatePost} />
           <Route path="/post/:blogId" component={BlogWrapper} />
@@ -48,11 +48,15 @@ class Home extends React.Component {
     posts: []
   }
   componentDidMount() {
-    axios.get(`getAllPosts`).then(res => this.setState({ posts: res.data}))
+    axios.get(`getAllPosts`).then(res => {
+      let data = res.data;
+      data.sort((a,b) => b.date._seconds-a.date._seconds);
+      this.setState({ posts: res.data})
+    })
   }
   render() {
     return (
-      <div>
+      <div style={{maxWidth: '60em'}}>
        <h1  style={{width: '90%', padding: '20px'}}>Wikilearn Blog</h1>
        {this.state.posts.map(post => <Post post={post}/>)}
       </div>
