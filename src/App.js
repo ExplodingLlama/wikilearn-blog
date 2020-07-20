@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, StaticRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, StaticRouter, Route} from "react-router-dom";
 import './App.css';
 import axios from 'axios'
 import moment from 'moment'
