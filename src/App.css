@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+div {
+    white-space: pre-wrap;
+}
 
 .App-logo {
   height: 40vmin;
