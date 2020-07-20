@@ -125,20 +125,24 @@ class CreatePost extends React.Component {
   render() {
     return (
       <div>
-        <h1  style={{padding: '20px'}}>Write a post</h1>
-            Title:
-            <input type="text" value={this.state.title} onChange={e => this.setState({ title: e.target.value })} />
-            <br/>
-            Body:
-            <textarea type="text" value={this.state.body} onChange={e => this.setState({ body: e.target.value })} />
-            <br/>
-            Token:
-            <input type="text" value={this.state.secretToken} onChange={e => this.setState({ secretToken: e.target.value })} />
-            <br/>
-            Id:
-            <input type="text" value={this.state.id} onChange={e => this.setState({ id: e.target.value })} />
-            <br/>
-            <input type="submit" value="Submit" onClick={this.handleSubmit}/>
+        <h1>Write a post</h1>
+          <div className='row'>
+            <div style={{paddingRight:'30px', fontWeight: 'bold'}}>Title</div>
+            <input style={{width: '500px', padding: '5px', borderRadius: '5px'}} type="text" value={this.state.title} onChange={e => this.setState({ title: e.target.value })} />
+          </div>
+            <div className='row'>
+              <div style={{paddingRight:'30px', fontWeight: 'bold'}}>Body</div>
+              <textarea style={{width: '500px', padding: '5px', borderRadius: '5px'}} rows='20' type="text" value={this.state.body} onChange={e => this.setState({ body: e.target.value })} />
+            </div>
+            <div className='row'>
+              <div style={{paddingRight:'30px', fontWeight: 'bold'}}>Token</div>
+              <input style={{width: '500px', padding: '5px', borderRadius: '5px'}} type="text" value={this.state.secretToken} onChange={e => this.setState({ secretToken: e.target.value })} />
+            </div>
+            <div className='row'>
+              <div style={{paddingRight:'30px', fontWeight: 'bold'}}>Id</div>
+              <input style={{width: '500px', padding: '5px', borderRadius: '5px'}} type="text" value={this.state.id} onChange={e => this.setState({ id: e.target.value })} />
+            </div>
+            <input style={{padding: '6px', marginTop: '20px', borderRadius: '5px', width: '100%'}} type="submit" value="Submit" onClick={this.handleSubmit}/>
       </div>
     )
   }
