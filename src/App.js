@@ -3,6 +3,7 @@ import { BrowserRouter, StaticRouter, Route} from "react-router-dom";
 import './App.css';
 import axios from 'axios'
 import moment from 'moment'
+import Loading from './Loading'
 
 axios.defaults.baseURL = "https://us-central1-wikiblog-95cf6.cloudfunctions.net"
 let axiosConfig = {
@@ -58,6 +59,7 @@ class Home extends React.Component {
     return (
       <div style={{maxWidth: '60em'}}>
        <h1  style={{width: '90%', padding: '20px'}}>Wikilearn Blog</h1>
+       {this.state.posts.length === 0 && <Loading />}
        {this.state.posts.map(post => <Post post={post}/>)}
       </div>
     )
