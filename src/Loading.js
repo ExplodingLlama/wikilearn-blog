@@ -8,7 +8,8 @@ const Loading = () => {
     "So, then I said to him, why not make a static website? It loads quicker, a much required requirement in today's time, and he said, 'Nah, I will just add some long winded loading messages'... ",
     "This website is supposed to load slowly so as to infuriate the user enough that they leave before they are able to read my horrendous writing..."
   ]
-  const message = messages[Math.floor((Math.random() * 4))]
+  const message = messages[Math.floor((Math.random() * 5
+))]
   return (
     <div style={{ padding: '20px', fontSize: '30px', color: '#aaa', marginTop: '40px'}}>
       {message}
