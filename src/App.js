@@ -58,7 +58,7 @@ class Home extends React.Component {
   render() {
     return (
       <div style={{maxWidth: '60em'}}>
-       <img src='./banner.png'  style={{width: '90%', paddingLeft: '20px'}}/>
+       <img src='./banner.png'  style={{width: '90%', paddingLeft: '20px'}} alt="Banner"/>
        {this.state.posts.length === 0 && <Loading />}
        {this.state.posts.map(post => <Post post={post}/>)}
       </div>
