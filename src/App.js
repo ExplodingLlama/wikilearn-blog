@@ -58,7 +58,7 @@ class Home extends React.Component {
   render() {
     return (
       <div style={{maxWidth: '60em'}}>
-       <h1  style={{width: '90%', padding: '20px'}}>Wikilearn Blog</h1>
+       <img src='./banner.png'  style={{width: '90%', paddingLeft: '20px'}}/>
        {this.state.posts.length === 0 && <Loading />}
        {this.state.posts.map(post => <Post post={post}/>)}
       </div>
