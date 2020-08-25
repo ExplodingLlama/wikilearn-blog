@@ -74,7 +74,7 @@ class Home extends React.Component {
        <img src='./banner.png'  style={{width: '90%', paddingLeft: '20px'}} alt="Banner"/>
        <div style={{flex: 1, flexDirection: 'row', margin:'20px'}}>
           <a href='https://wikilearnproductions.com' style={menuStyle}>Home</a>
-          <a href='' style={menuStyle}>Blog</a>
+          <a href='/' style={menuStyle}>Blog</a>
           <a href='https://wikilearnproductions.com/videos'  style={menuStyle}>Videos</a>
           <a href='https://wikilearnproductions.com/talks'  style={menuStyle}>Talks</a>
           <a href='https://wikilearnproductions.com/conscious'  style={menuStyle}>Understanding Consciousness Podcast</a>
