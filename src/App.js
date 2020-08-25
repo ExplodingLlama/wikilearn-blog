@@ -44,6 +44,18 @@ class App extends React.Component {
   }
 }
 
+let menuStyle = {
+  padding: '10px',
+  paddingLeft: '20px',
+  paddingRight: '20px',
+  borderRadius: '2',
+  borderStyle: 'solid',
+  borderWidth: '1px',
+  borderColor: '#eee',
+  textDecoration: 'none',
+  color: 'black',
+}
+
 class Home extends React.Component {
   state = {
     posts: []
@@ -55,10 +67,18 @@ class Home extends React.Component {
       this.setState({ posts: res.data})
     })
   }
+
   render() {
     return (
       <div style={{maxWidth: '60em'}}>
        <img src='./banner.png'  style={{width: '90%', paddingLeft: '20px'}} alt="Banner"/>
+       <div style={{flex: 1, flexDirection: 'row', margin:'20px'}}>
+          <a href='https://wikilearnproductions.com' style={menuStyle}>Home</a>
+          <a href='' style={menuStyle}>Blog</a>
+          <a href='https://wikilearnproductions.com/videos'  style={menuStyle}>Videos</a>
+          <a href='https://wikilearnproductions.com/talks'  style={menuStyle}>Talks</a>
+          <a href='https://wikilearnproductions.com/conscious'  style={menuStyle}>Understanding Consciousness Podcast</a>
+       </div>
        {this.state.posts.length === 0 && <Loading />}
        {this.state.posts.map(post => <Post post={post}/>)}
       </div>
